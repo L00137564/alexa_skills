@@ -1,3 +1,8 @@
+## AUTHOR: Owen Lyons
+## DATE: 25/10/17
+## PROGRAM DESC: Count squirly brackets, if matched then syntax is ok
+
+
 import os
 import time
 
@@ -5,7 +10,8 @@ count_left = 0
 count_right = 0
 double = '{'+'}'
 
-file = open('new_skill_name.txt', 'r')
+#file = open('new_skill_name.txt', 'r')
+file = open('latest_modified_skill.txt', 'r')
 
 for line in file:
 	skill_name = line

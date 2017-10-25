@@ -1,3 +1,7 @@
+## AUTHOR: Owen Lyons
+## DATE: 25/10/17
+## PROGRAM DESC: Create new skill
+
 import os
 import time as t
 

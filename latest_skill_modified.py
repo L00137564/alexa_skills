@@ -1,3 +1,8 @@
+## AUTHOR: Owen Lyons
+## DATE: 25/10/17
+## PROGRAM DESC: Get latest modified folder
+
+
 import os
 import glob
 
