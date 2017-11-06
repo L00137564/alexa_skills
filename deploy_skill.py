@@ -22,7 +22,7 @@ os.chdir(new_skill_dir)
 cwd = os.getcwd()
 print('Current directory is: ', cwd)
 
-deploy = 'C:\\Users\\lyons\\AppData\\Roaming\\npm\\ask ask deploy -t skill -p owen'
+deploy = 'C:\\Users\\lyons\\AppData\\Roaming\\npm\\ask deploy -t skill -p owen'
 
 
 print('')

@@ -11,7 +11,7 @@ count_right = 0
 double = '{'+'}'
 
 #file = open('new_skill_name.txt', 'r')
-file = open('latest_modified_skill.txt', 'r')
+file = open('C:\\Users\\lyons\\Desktop\\alexa_python\\latest_modified_skill.txt', 'r')
 
 for line in file:
 	skill_name = line
