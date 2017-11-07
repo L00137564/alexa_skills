@@ -6,11 +6,12 @@ import os
 import time as t
 
 print('///////////////////////////////////////////////////////////////////////////////////////////')
-print('///////////////////////////////  NEW SKILL ///////////////////////////////////////////')
+print('///////////////////////////////  NEW AND DEPLOY ///////////////////////////////////////////')
 print('///////////////////////////////////////////////////////////////////////////////////////////')
 
-skill_name = 'test_skill_501'
+skill_name = 'test_skill_505'
 ask_new = 'C:\\Users\\x213859\\AppData\\Roaming\\npm\\ask new -n ' + skill_name + ' -p owen'
+#ask_new = 'ask new -n ' + skill_name + ' -p owen'
 
 cwd = os.getcwd()
 
@@ -23,9 +24,16 @@ os.chdir('C:\\Users\\x213859\\jenkins\\workspace\\alexa_skills_test')
 output = os.popen(ask_new).read()
 print('OUTPUT: ' + str(output))
 
-if 'New'in output:
-	print('SUCCESS:  ' + skill_name + ' created')
-	t.sleep(3)
+t.sleep(3)
 
-else:
-	print('ERROR__Could not create new skill')
+new_skill_dir = 'C:\\Users\\x213859\\jenkins\\workspace\\alexa_skills_test\\' + str(skill_name)
+os.chdir(new_skill_dir)
+
+deploy = 'C:\\Users\\x213859\\AppData\\Roaming\\npm\\ask deploy -t skill -p owen'
+
+print('')
+#deploy_skill = os.system(deploy)
+deploy_skill = os.popen(deploy).read()
+
+print(deploy_skill)
+

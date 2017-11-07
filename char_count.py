@@ -6,18 +6,21 @@
 import os
 import time
 
+print('///////////////////////////////////////////////////////////////////////////////////////////')
+print('///////////////////////////////  TEST - BRACE COUNT////////////////////////////////////////')
+print('///////////////////////////////////////////////////////////////////////////////////////////')
+
 count_left = 0
 count_right = 0
 double = '{'+'}'
 
 #file = open('new_skill_name.txt', 'r')
-file = open('C:\\Users\\lyons\\Desktop\\alexa_python\\latest_modified_skill.txt', 'r')
+file = open('latest_modified_skill.txt', 'r')
 
 for line in file:
 	skill_name = line
 
-
-new_skill_dir = 'C:\\Users\\lyons\\jenkins\\workspace\\alexa_skills_pipeline\\skills\\' + str(skill_name)
+new_skill_dir = 'C:\\Users\\x213859\\jenkins\\workspace\\alexa_skills_test\\' + str(skill_name)
 os.chdir(new_skill_dir)
 file.close()
 
@@ -32,7 +35,7 @@ for line in skill:
 		count_right = count_right + 1
 
 skill.close()
- ##################################################
+##################################################
 
 skill = open('skill.json', 'r')
 
@@ -44,8 +47,8 @@ skill.close()
 
 print('')
 print('Skill Name: ', skill_name)
-print('Left parenthesis: ', count_left)
-print('Right parenthesis: ', count_right)
+print('Left brackets: ', count_left)
+print('Right brackets: ', count_right)
 print('')
 
 ####################################################
@@ -55,4 +58,3 @@ if count_right == count_left:
 else:
 	print('Syntax Error')
 
-print('')
